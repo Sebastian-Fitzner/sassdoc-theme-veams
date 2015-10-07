@@ -1,0 +1,52 @@
+{
+	"annotations": {
+		"function": [
+			"description",
+			"usedby",
+			"parameter",
+			"return",
+			"example",
+			"throws",
+			"since",
+			"see",
+			"todo",
+			"link",
+			"author"
+		],
+		"mixin": [
+			"description",
+			"require",
+			"parameter",
+			"output",
+			"example",
+			"throws",
+			"since",
+			"see",
+			"todo",
+			"link",
+			"author"
+		],
+		"placeholder": [
+			"description",
+			"example",
+			"throws",
+			"since",
+			"see",
+			"todo",
+			"link",
+			"author"
+		],
+		"variable": [
+			"description",
+			"require",
+			"usedby",
+			"prop",
+			"example",
+			"since",
+			"see",
+			"todo",
+			"link",
+			"author"
+		]
+	}
+}
