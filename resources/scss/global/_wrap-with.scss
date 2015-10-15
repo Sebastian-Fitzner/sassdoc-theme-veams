@@ -1,0 +1,12 @@
+/* ===================================================
+All WrapWith elements
+=================================================== */
+
+.wrapper--teaser-home {
+	margin: 3rem 0;
+	float: left;
+}
+
+.wrapper--teaser-intro {
+	@extend %float;
+}

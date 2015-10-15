@@ -1,19 +1,33 @@
-<nav class="side-nav">
-	<ul class="side-nav__social">
-		<li><a class="side-nav__github" href="{{ view.links.github }}">GitHub / Install</a></li>
-		<li><a class="side-nav__twitter" href="{{ view.links.twitter }}">Twitter</a></li>
-		<li><a class="side-nav__gitter" href="{{ view.links.gitter }}">Gitter</a></li>
-	</ul>
+<nav class="b-toc">
+	<header class="header">
+		<div class="header__inner is-table-lyt">
+			<div class="r-header-left">
+				<div class="b-logo">
+					<h1 class="logo__headline">
+						<a class="logo__link is-veams-sass" href="/sass/"> Veams-Sass </a>
+					</h1>
+				</div>
+			</div>
+			<div class="r-header-right">
+				<div class="b-github">
+					<h2 class="github__headline">
+						<a class="github__link" target="_blank" href="https://github.com/sebastian-fitzner/veams-sass"> Go To Github </a>
+					</h2>
+				</div>
+			</div>
+		</div>
+	</header>
 
-	<a class="side-nav__logo-container" href="{{ view.library.homepage }}">
-		<img alt="{{ view.library.name }} Logo" class="logo" src="{{ view.logoPath }}"> </a>
+	{% for group_name, group in data.byGroupAndType %}
+		<div class="toc__content" data-js-module="toggler">
+			<a class="toc__headline" data-slug="{{ group_name }}" href="#{{ group_name }}" data-js-atom="toggler-button">{{ groups[group_name] }}</a>
+			<ul class="toc__list" data-js-atom="toggler-content" data-js-options='{}'>
+				{% for type, items in group %}
+					{% include "type_list.swig" %}
+				{% endfor %}
+			</ul>
+		</div>
 
-	<ul class="side-nav__list">
-		{% for group_name, group in data.byGroupAndType %}
-			<a class="side-nav__group" data-slug="{{ group_name }}" href="#{{ group_name }}">{{ groups[group_name] }}</a>
-			{% for type, items in group %}
-				{% include "type_list.swig" %}
-			{% endfor %}
-		{% endfor %}
-	</ul>
+	{% endfor %}
+
 </nav>

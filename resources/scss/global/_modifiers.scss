@@ -1,0 +1,55 @@
+/* ===================================================
+GLOBAL MODIFIERS
+=================================================== */
+
+/* ---------------------------------------------------
+Layout Modifiers
+--------------------------------------------------- */
+.is-container {
+	/*
+	General Styles
+	----------------------- */
+	@include outer-container;
+
+	padding: 0 2rem;
+}
+
+.is-table-lyt {
+	@include fill-parent();
+	@include display(table);
+}
+
+.is-centered {
+	text-align: center;
+}
+
+.isnt-scrollable {
+	overflow: hidden;
+}
+
+
+/* ---------------------------------------------------
+Logo Modifiers
+--------------------------------------------------- */
+.is-veams {
+	@include sprites-veams-std();
+}
+
+.is-veams-generator {
+	@include sprites-veams-generator();
+}
+
+.is-veams-methodology {
+	@include sprites-veams-methodology();
+}
+
+.is-veams-sass {
+	@include sprites-veams-sass();
+}
+.is-veams-js {
+	@include sprites-veams-js();
+}
+.is-veams-components {
+	@include sprites-veams-components();
+}
+

@@ -1,0 +1,23 @@
+/* ===================================================
+Page
+=================================================== */
+
+.r-content {
+	@include span-columns(9);
+	@include shift(3);
+	@include omega();
+
+	padding: 4rem 1.5rem;
+}
+
+.r-sidebar {
+	@include span-columns(3);
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: auto;
+	height: 100%;
+	padding: 0 1rem;
+	background-color: color(white);
+}

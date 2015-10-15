@@ -1,30 +1,28 @@
-<header class="c-title">
-	<h2 class="title__headline">
-		<a href="#{{ name }}">
-			{{ name }}
-		</a>
+<header class="article__header">
+	<h2 class="article__header-headline" id="#{{ name }}">
+		{{ name }}
 	</h2>
 
 	{% if item.context.type == "variable" %}
 		<span class="is-type-label">{{ item.type }}</span>
 	{% endif %}
 
-	<div class="title__metadata">
+	<div class="article__metadata">
 		{% if view.display.alias and item.aliased.length > 0 %}
-			<span class="title__aliased"> (aliased as {% for alias in item.aliased %}
+			<span class="article__aliased"> (aliased as {% for alias in item.aliased %}
 				<a href="#{{ alias }}"><code>{{ alias }}</code></a> {% endfor %}) </span>
 		{% endif %}
 
 		{% if item.alias %}
-			<span class="title__alias">(alias for <a href="#{{ item.alias[0] }}"><code>{{ item.alias[0] }}</code></a>)</span>
+			<span class="article__alias">(alias for <a href="#{{ item.alias[0] }}"><code>{{ item.alias[0] }}</code></a>)</span>
 		{% endif %}
 
 		{% if item.since.length == 1 %}
-			<span class="title__since">Since {{ item.since[0].version }} - {{ item.since[0].description }}</span>
+			<span class="article__since">Since {{ item.since[0].version }} - {{ item.since[0].description }}</span>
 		{% endif %}
 
 		{% if item.deprecated %}
-			<p class="title__deprecated">
+			<p class="article__deprecated">
 				<strong>Deprecated!</strong>{% if item.deprecated[0] != "" %} {{ item.deprecated[0] }}{% endif %}
 			</p>
 		{% endif %}

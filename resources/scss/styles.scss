@@ -11,14 +11,16 @@ Main File For Imports
 // Global Variables and Settings
 @import "global/_vars";
 @import "../bower-components/veams-sass/resources/scss/veams";
- 
-@import "../bower-components/neat/app/assets/stylesheets/neat"; 
+@import "../bower-components/neat/app/assets/stylesheets/neat";
 
 // Icons
 @import "icons/**/*";
 
 // Mixins
 @import "utils/mixins/**/*";
+
+// Functions
+@import "utils/functions/**/*";
 
 // Extends
 @import "utils/extends/**/*";
@@ -29,11 +31,18 @@ Main File For Imports
 // Regions in Layouts
 @import "layouts/**/*";
 
+// Docs
+@import "docs/**/*";
+
 // Components
 @import "components/**/*";
 
 // Blocks
 @import "blocks/**/*";
+
+// Wrap With
+@import "global/wrap-with";
+@import "global/modifiers";
 
 // Print
 @import "global/_print";

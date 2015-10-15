@@ -63,7 +63,6 @@ module.exports = function(grunt) {
 	 */
 	grunt.registerTask('server', [
 		'jsTemplates',
-		'browserify:vendor',
 		'browserify:dev',
 		'concurrent:syncing',
 		'watchCSS',
@@ -75,7 +74,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', [
 		'clean:dev',
 		'jsTemplates',
-		'browserify:vendor',
 		'browserify:dist',
 		'uglify',
 		'concurrent:syncing', 

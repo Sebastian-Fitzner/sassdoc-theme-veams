@@ -1,0 +1,81 @@
+/* ===================================================
+TOC
+=================================================== */
+
+.b-toc {
+	@include float;
+	padding-bottom: 2rem;
+
+	.toc__headline {
+		@include float;
+
+		font-size: 1.9rem;
+		display: block;
+		padding: 1rem 1rem;
+		background: $color-grey-light;
+		color: color(highlight-dark);
+		font-weight: 500;
+		text-transform: uppercase;
+		border-bottom: 1px solid color(white);
+		text-decoration: none;
+
+		&:hover {
+			background: color(highlight-dark);
+			color: color(white);
+		}
+	}
+
+	.toc__cat {
+		text-align: right;
+		padding-right: 5px;
+
+		a {
+			text-decoration: none;
+			color: color(highlight-main-dark);
+		}
+	}
+	.toc__list-item {
+		border-top: 1px solid color(highlight-main);
+
+		&:last-child {
+			border-bottom: 1px solid color(highlight-main);
+		}
+	}
+	.toc__link {
+		@include btn($bg-colors: color(white) color(highlight-main), $font-colors: color(highlight-main-dark) color(white), $font-size: 1.95rem, $display: block);
+	}
+
+	.toc__social {
+		@include clearfix;
+		background: shade($color-grey-light, 50%);
+		margin-top: 0;
+		padding: .25em 4em;
+
+		li {
+			@include calc(width, '100% / 3');
+			display: inline-block;
+			float: left;
+		}
+
+		a {
+			@include hide-text;
+			@include size(25px);
+			background: url('../img/social-icons.svg') no-repeat center center;
+			background-size: 300%;
+			display: block;
+			margin: 0 auto;
+
+			&.toc__twitter {
+				background-position: left center;
+			}
+
+			&.toc__gitter {
+				background-position: right center;
+			}
+		}
+	}
+
+	.toc__list {
+		display: none;
+	}
+}

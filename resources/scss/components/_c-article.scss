@@ -1,0 +1,11 @@
+[data-css="c-article"] {
+	.article__header-headline {
+		@include article-headline;
+	}
+}
+
+.c-article--item {
+	.article__header-headline {
+		display: inline-block;
+	}
+}

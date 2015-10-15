@@ -1,9 +1,7 @@
-var libs = [ 
+var libs = [
 	'jquery',
 	'exoskeleton',
-	'handlebars',
-	'respimage',
-	'touchswipe'
+	'handlebars'
 ];
 
 module.exports = {
@@ -11,25 +9,16 @@ module.exports = {
 		transform: [
 			[
 				"babelify", {
-					"stage": 0
-				}
+				"stage": 0
+			}
 			]
+		],
+		external: [
+			'underscore'
 		]
-	},
-	vendor: {
-		src: ['.'],
-		dest: '<%= paths.dev %>/js/vendor/libs.js',
-		options: {
-			debug: false,
-			alias: libs,
-			external: [
-				'underscore'
-			]
-		}
 	},
 	dev: {
 		options: {
-			external: libs,
 			browserifyOptions: {
 				debug: true
 			},

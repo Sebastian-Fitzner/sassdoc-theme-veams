@@ -9,8 +9,8 @@ swigExtras.useFilter(swig, "trim");
 swigExtras.useFilter(swig, "groupby");
 
 var theme = themeleon(__dirname, function (t) {
-	t.copy("assets");
-	t.swig('views/index.swig', 'index.html');
+	t.copy("_output");
+	t.swig('resources/templating/index.swig', '_output/index.html');
 });
 
 module.exports = function (dest, ctx) {
@@ -18,10 +18,10 @@ module.exports = function (dest, ctx) {
 		display: {
 			access: ["public", "private"],
 			alias: false,
-			watermark: true,
+			watermark: true
 		},
 		groups: {
-			"undefined": "General",
+			"undefined": "General"
 		}
 	};
 

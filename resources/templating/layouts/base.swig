@@ -5,35 +5,38 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="{{ package.description }}">
-	<link href="http://fonts.googleapis.com/css?family=Nunito:300,700" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600italic,600,700,700italic,900,300italic,300,200italic,200" rel="stylesheet" type="text/css">
-	<link rel="shortcut icon" type="image/x-icon" href="{{ view.faviconPath }}"/>
 	<title>{{ package.title }}</title>
-	<link rel="stylesheet" href="assets/css/main.css"/>
+	<link href="http://fonts.googleapis.com/css?family=Roboto:400,700,900,300" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="css/styles.css"/>
 </head>
 
 <body>
 
 	<div class="page-wrapper">
-		<header class="r-header">
-			<div class="logo__meta-data">
-				<h1>{{ package.name | capitalize }}{% if package.version %}
-						<span>{{ package.version }}</span>{% endif %}</h1>
-			</div>
-
-			<div class="b-search" data-role="search-form">
-				<input name="search" type="text" class="search__field" autocomplete="off" autofocus id="search-field" placeholder="Search documentation..." data-js-module="search"/>
-				<ul class="suggestion-container"></ul>
-			</div>
-		</header>
-		<main class="main-content" id="main">
-			{% block content %}{% endblock %}
-		</main>
 		<section class="r-sidebar">
 			{% include "../partials/navigation.swig" %}
 		</section>
-	</div>
+		<div class="r-content">
 
+			<!--<div class="r-search">
+				<div class="b-search" data-role="search-form">
+					<input name="search" type="text" class="search__field" autocomplete="off" autofocus id="search-field" placeholder="Search documentation..." data-js-module="search"/>
+					<ul class="suggestion-container"></ul>
+				</div>
+			</div>-->
+
+			<main class="r-main">
+				<div class="main__inner">
+					<div class="main__content">
+						<div class="r-main-left">
+							{% block content %}{% endblock %}
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+	</div>
 	{% include "../partials/javascript.swig" %}
 </body>
 </html>

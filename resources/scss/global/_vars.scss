@@ -1,20 +1,45 @@
+/* ---------------------------------------------------
+Global Settings
+--------------------------------------------------- */
 @import "../../bower-components/neat/app/assets/stylesheets/neat-helpers";
-/* ===================================================
-BOURBON NEAT
-=================================================== */
+
 $column: 73px;
 $gutter: 22px;
 $grid-columns: 12;
-$max-width: 1138px;
+$max-width: 1360px;
+$min-width: false; // This variable will be used in veams-scss for bp()
 
-// Define Your Breakpoints For Bourbon Neat
-$bp-tablet-l: new-breakpoint(max-width 1024px 12);
-$bp-tablet-p: new-breakpoint(max-width 768px 12);
-$bp-mobile-l: new-breakpoint(max-width 640px 12);
-$bp-mobile-p: new-breakpoint(max-width 480px 8);
-$bp-mobile-s: new-breakpoint(max-width 320px 8);
+/* ---------------------------------------------------
+Breakpoints
+--------------------------------------------------- */
+$bp: (
+	tablet-l: new-breakpoint(max-width 1024px 12),
+	tablet-p: new-breakpoint(max-width 768px 12),
+	mobile-l: new-breakpoint(max-width 640px 12),
+	mobile-p: new-breakpoint(max-width 480px 12)
+);
 
+/* ---------------------------------------------------
+Colors
+--------------------------------------------------- */
+$color-grey-light: lighten(#373737, 65);
+$colors: (
+	highlight-main-dark: #BB802A,
+	highlight-main: lighten(#BB802A, 10),
+	highlight-dark: #373737,
+	highlight-light: #F5F5F5,
+	white: #fff
+);
 
-$use-min-width: false; // This variable will be used in veams-sass
+/* ---------------------------------------------------
+Backgrounds
+--------------------------------------------------- */
+$bg-pattern: url('../img/bg-pattern.png');
 
-
+/* ---------------------------------------------------
+Fonts
+--------------------------------------------------- */
+$font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+$font-light: 300;
+$font-normal: 400;
+$font-bold: 900;

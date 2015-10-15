@@ -1,11 +1,13 @@
-<li class="side-nav__title">
-	<a href="#{{ type }}">
-		<h3 class="side-nav__type">{{ (type + 's') }}</h3>
-	</a>
+<li class="toc__title">
+	<h3 class="toc__cat">
+		<a href="#{{ type }}">
+			{{ (type + 's') }}
+		</a>
+	</h3>
 </li>
 
 {% for item in items %}
-	<li class="side-nav__list-item">
-		<a class="side-nav__link" href="#{{ item.context.type }}-{{ item.context.name }}">{{ item.context.name }}</a>
+	<li class="toc__list-item">
+		<a class="toc__link" href="#{{ item.context.type }}-{{ item.context.name }}">{{ item.context.name }}</a>
 	</li>
 {% endfor %}
