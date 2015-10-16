@@ -24,10 +24,10 @@
 			{% endif %}
 		{% endfor %}
 
-		<div class="declaration__code-wrapper">
-		  <pre class="declaration__code language-scss is-collapsed"
+		<div class="declaration__code-wrapper" data-js-module="declaration">
+		  <pre data-js-atom="declaration-btn" class="declaration__code language-scss is-collapsed"
 		       data-js-expanded="@{{ item.context.type }} {{ item.context.name }}({{ parameters_string }}) { {{ item.context.code }} }"
-		       data-js-collapsed="@{{ item.context.type }} {{ item.context.name }}({{ parameters_string }}) { ... }"><code>@{{ item.context.type }} {{ item.context.name }}({{ parameters_string }}) { ... }</code></pre>
+		       data-js-collapsed="@{{ item.context.type }} {{ item.context.name }}({{ parameters_string }}) { ... }"><code data-js-atom="declaration-content">@{{ item.context.type }} {{ item.context.name }}({{ parameters_string }}) { ... }</code></pre>
 
 			{% if basePath %}
 				<a href="{{ basePath }}/{{ item.file.path }}#L{{ item.context.line.start }}-L{{ item.context.line.end }}" class="declaration__link" target="_blank">View source</a>

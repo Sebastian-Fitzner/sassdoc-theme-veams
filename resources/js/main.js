@@ -8,6 +8,7 @@ var $ = App.$;
 // ES6 Modules
 import ButtonInit from './modules/button/button-init';
 import Toggler from './modules/toggler/toggler';
+import Declaration from './modules/declaration/declaration';
 
 "use strict";
 
@@ -54,6 +55,15 @@ class Core {
 		Helpers.loadModule({
 			el: '[data-js-module="toggler"]',
 			Module: Toggler,
+			context: context
+		});
+
+		/**
+		 * Init Declaration Handling
+		 */
+		Helpers.loadModule({
+			el: '[data-js-module="declaration"]',
+			Module: Declaration,
 			context: context
 		});
 	}

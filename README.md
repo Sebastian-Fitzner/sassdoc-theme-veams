@@ -2,7 +2,7 @@
 
 A simple sassdoc theme for veams. It can be used as blueprint and is heavily influenced by sassdoc-theme-neat. 
 
-Current version="0.1.1-2"
+Current version="0.1.1-4"
 
 ## Requirements For Frontend Development
 
